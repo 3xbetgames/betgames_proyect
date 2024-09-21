@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/register.css') }}">
+{% endblock %}
+
+{% block body %}
+<form class="form-register" action="{{ url_for('register') }}" method="POST">
+    <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="100" height="60">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <br />
+            {% for message in messages %}
+            <div class="alert alert-primary alert-dismissible" role="alert">
+                <strong>{{ message }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <h1 class="h3 mb-3 fw-normal">Register</h1>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    
+    <div class="form-floating">
+        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+        <label for="username">Username</label>
+    </div>
+    
+    <div class="form-floating mt-2">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+        <label for="password">Password</label>
+    </div>
+
+    <div class="form-floating mt-2">
+        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name" required>
+        <label for="fullname">Full Name</label>
+    </div>
+    
+    <div class="form-floating mt-2">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        <label for="email">Email</label>
+    </div>
+
+    <div class="form-floating mt-2">
+        <select class="form-control" id="document_type" name="document_type" required>
+            <option value="CC">CC, Cédula de ciudadanía</option>
+            <option value="TE">TE, Tarjeta de extranjería</option>
+        </select>
+        <label for="document_type">Document Type</label>
+    </div>
+
+    <div class="form-floating mt-2">
+        <input type="text" class="form-control" id="identity_number" name="identity_number" placeholder="Identity Number" required>
+        <label for="identity_number">Identity Number</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    <a href="{{ url_for('login') }}" class="btn btn-link">Already have an account? Sign in</a>
+</form>
+{% endblock %}

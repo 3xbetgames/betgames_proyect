@@ -1,0 +1,92 @@
+/* Estilos generales del cuerpo */
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #000000; /* Fondo negro */
+    color: #d3d3d3; /* Texto gris claro */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Estilo del formulario de registro */
+  .form-register {
+    width: 100%;
+    max-width: 330px;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo negro con un toque gris oscuro */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 255, 0, 0.6), inset 0px 0px 10px rgba(0, 255, 0, 0.4); /* Sombra verde y efecto de bisel */
+    margin: auto;
+  }
+  
+  /* Efectos de enfoque para los campos de formulario */
+  .form-register .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  /* Estilo para los campos de texto */
+  .form-register input[type="text"],
+  .form-register input[type="email"],
+  .form-register input[type="password"] {
+    background-color: #000000; /* Fondo negro */
+    border: 1px solid #333; /* Borde gris oscuro */
+    color: #d3d3d3; /* Texto gris claro */
+    box-shadow: inset 0px 0px 5px rgba(0, 255, 0, 0.5); /* Efecto de bisel verde */
+  }
+  
+  /* Estilo para los campos de texto, eliminando los bordes redondeados */
+  .form-register input[type="text"],
+  .form-register input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Estilo para los campos de contraseña */
+  .form-register input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  /* Estilo del botón de registro */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000; /* Fondo negro */
+    border: 2px solid #00ff00; /* Borde verde radiactivo */
+    color: #00ff00; /* Texto verde radiactivo */
+    font-size: 1.2rem;
+    font-weight: bold; /* Negrita */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s, color 0.3s; /* Añadido color en transición */
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); /* Efecto de bisel verde */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00cc00; /* Verde radiactivo más oscuro */
+    border-color: #00cc00; /* Borde verde radiactivo más oscuro */
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7); /* Efecto de brillo verde */
+    color: #000000; /* Texto negro cuando se pasa el cursor */
+  }
+  
+  /* Enlace para volver al inicio de sesión */
+  a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #00ff00; /* Verde radiactivo */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold; /* Negrita */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #00cc00; /* Verde radiactivo más oscuro */
+  }
+  

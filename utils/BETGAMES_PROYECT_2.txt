@@ -1,0 +1,22 @@
+BETGAMES_PROYECT_2/
+│
+├── __pycache__/
+├── database/
+│   └── flask_login.sql
+├── src/
+│   ├── models/
+│   │   └── entities/
+│   │       ├── __init__.py
+│   │       └── ModelUser.py
+│   ├── static/
+│   │   ├── img/
+│   │   └── styles/
+│   └── templates/
+│       ├── auth/
+│       │   └── login.html
+│       ├── base.html
+│       └── home.html
+├── .gitignore
+├── app.py
+├── config.py
+└── requirements.txt
